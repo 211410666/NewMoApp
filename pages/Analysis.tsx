@@ -419,7 +419,7 @@ export default function Analysis() {
                                                 <Text style={[styles.scoreText, { textAlign: 'center' }]}>{user.maxLosingStreak}</Text>
                                                 <View style={{ alignItems: 'center' }}>
                                                     <Text style={[styles.dateText, { flex: 4 }]}>📅 {user.maxLosingStreakStart.slice(0, 10)}</Text>
-                                                    <Text style={[styles.dateText, { flex: 4 }]}>📅 ~{user.maxLosingStreakEnd.slice(0, 10)}</Text>
+                                                    <Text style={[styles.dateText, { flex: 4 }]}>~{user.maxLosingStreakEnd.slice(0, 10)}</Text>
                                                 </View>
                                                 
                                             </View>
