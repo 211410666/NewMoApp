@@ -1,37 +1,21 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Node.js 相關
 node_modules/
-
-# Expo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env
 .expo/
-dist/
-web-build/
-expo-env.d.ts
+.expo-shared/
 
-# Native
-.kotlin/
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Expo 打包輸出
+#dist/
+#web-build/
 
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
+# 作業系統產生的檔案
 .DS_Store
-*.pem
+Thumbs.db
 
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
+# IDE 產生的檔案
+.vscode/
+.idea/
