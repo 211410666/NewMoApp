@@ -417,7 +417,11 @@ export default function Analysis() {
                                                 </Text>
                                                 <Text style={[styles.nameText, { textAlign: 'center' }]}>{user?.name || "未知玩家"}</Text>
                                                 <Text style={[styles.scoreText, { textAlign: 'center' }]}>{user.maxLosingStreak}</Text>
-                                                <Text style={[styles.dateText, { flex: 4 }]}>📅 {user.maxLosingStreakStart.slice(0, 10)} ~ {user.maxLosingStreakEnd.slice(5, 10)}</Text>
+                                                <View style={{ alignItems: 'center' }}>
+                                                    <Text style={[styles.dateText, { flex: 4 }]}>📅 {user.maxLosingStreakStart.slice(0, 10)}</Text>
+                                                    <Text style={[styles.dateText, { flex: 4 }]}>📅 ~{user.maxLosingStreakEnd.slice(0, 10)}</Text>
+                                                </View>
+                                                
                                             </View>
                                         );
                                     })}
@@ -443,7 +447,10 @@ export default function Analysis() {
                                                 </Text>
                                                 <Text style={[styles.nameText, { textAlign: 'center' }]}>{user?.name || "未知玩家"}</Text>
                                                 <Text style={[styles.scoreText, { textAlign: 'center', color: 'green' }]}>{user.maxWinningStreak}</Text>
-                                                <Text style={[styles.dateText, { flex: 4 }]}>📅 {user.maxWinningStreakStart.slice(0, 10)} ~ {user.maxWinningStreakEnd.slice(5, 10)}</Text>
+                                                <View style={{ alignItems: 'center' }}>
+                                                    <Text style={styles.dateText}>📅 {user.maxWinningStreakStart.slice(0, 10)}</Text>
+                                                    <Text style={styles.dateText}>~{user.maxWinningStreakEnd.slice(0, 10)}</Text>
+                                                </View>
                                             </View>
                                         );
                                     })}
@@ -721,7 +728,7 @@ const styles = StyleSheet.create({
     },
 
     dateText: {
-        flex: 2,
+        flex: 3,
         fontSize: 14,
         color: "#7f8c8d",
     },
